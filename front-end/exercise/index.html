@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Title</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <link rel="stylesheet" type="text/css" href="style/style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+        <script src="js/index.js"></script>
+        <script src="https://kit.fontawesome.com/c939d0e917.js "></script> 
+    </head>
+    <body>
+        <div class="title">The Store Locator</div>
+        
+        <div id="Search-bar">
+            <div id="search">
+                <input id="zip-code" type="text" onkeyup="onEnter(event)" placeholder="Enter zip-code"/>
+                <i class="fa fa-search" style="color:#fff" onclick="getStores()"></i>
+            </div>
+        </div>
+
+        <div id="store-list-box">
+            <div class="stores-list">
+                <div class="intro">
+                    <span class="enter-zip">
+                        Enter zip code
+                    </span>
+                    <span class="find-stores">Find stores near you</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkaCYirdgvIWthle50Jd3LB3jElfGYOvw&callback=initMap">
+    </script>
+    </body>
+</html>

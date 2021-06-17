@@ -1,0 +1,223 @@
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+  /* Optional: Makes the sample page fill the window. */
+  html,
+  body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      background-color: black;
+  }
+
+.title {
+  writing-mode:vertical-rl;
+  transform:scale(-1);
+  height: 100%;
+  font-family:'UnifrakturCook', cursive;
+  font-size: x-large;
+  text-align: center;
+  color: white;
+}
+
+#map {
+    height: 94%;
+    width: 96%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    z-index: 0;
+    border: 1px solid white;
+}
+
+
+#Search-bar {
+  position: absolute;
+  z-index: 10;
+  width: 300px;
+  height: 50px;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 50px;
+  top: 150px;
+  left: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#search{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+#zip-code{
+  background-color: black;
+  font-size: medium;
+  flex-grow: 1;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  outline: none;
+}
+
+#store-list-box {
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 10px;
+  z-index: 20;
+  top: 250px;
+  left: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+.store-window{
+  min-width: 300px;
+  font-size: 13px;
+  padding: 8px;
+}
+
+.store-name{
+  font-size: 24px;
+  font-weight: bold;
+  color: rbga(0,0,0,.87);
+}
+
+.store-open{
+  margin-top: 6px;
+  border-bottom: 1px solid #ccc;
+  color: rgbs(0,0,0,.57);
+  padding-bottom: 8px;
+}
+
+.store-address, .store-phone{
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.store-phone a , .store-address{
+  text-decoration: none;
+  color: #514C4C;
+}
+
+.icon {
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.stores-list {
+  flex-grow: 1;
+  color: white;
+  overflow-y: scroll;
+}
+
+.store-container{
+  border-bottom: 1px solid#B5ADAd;
+  padding: 10px;
+  display: flex;
+}
+
+.store{
+  flex-grow: 1;
+}
+
+.storeListAddress {
+  font-size: 21px;
+  color:white ;
+  margin-top: 30px;
+
+}
+
+.storeListAddress span{
+  display: block;
+}
+
+.storeListPhone{
+  color: #ccc;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+}
+
+.storeListNumber{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-number{
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 50%;
+  color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-container-background{
+  flex:1;
+  display: flex;
+  border-radius: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+}
+
+.store-container-background:hover{
+  background-color: #272626;
+}
+
+.intro{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.enter-zip {
+  color: white;
+  font-size: 22px;
+}
+
+.find-stores{
+  color: #1985A1;
+  font-size: 20px;
+}
+
+.not-found{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-message{
+  color: white;
+  font-size: 22px;
+}
